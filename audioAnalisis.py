@@ -8,7 +8,7 @@ abnorm_data_dir = './abormals/'#directorio de las canciones
 abnorm_audio_files = glob(abnorm_data_dir + '*.wav') #encuentras las que tiene las wav
 
 '''
-WARNING : 
+WARNING :
     glob library doesn't retrieve files on specific order. Be sure to control the order when retrieving
     production data in order to ensure a reproducible model.
 '''

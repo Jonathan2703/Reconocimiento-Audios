@@ -6,6 +6,7 @@ from sklearn.decomposition import  PCA
 class Kmeans:
     def __init__(self,datos):
         self.datos=datos
+        self.red=None
         
     def importarDatos(self):
         # direccion='C:/Users/chris/Desktop/Universidad de Cuenca/IA/DATASETS/caracteristicas de vinos.csv'
@@ -48,6 +49,7 @@ class Kmeans:
     def kmeansPro(self,datosNormalizados,datosOriginal):
         cluster=KMeans(n_clusters=3,max_iter=500)#creacion del modelo
         cluster.fit(datosNormalizados)
+        self.red=cluster
         # x=cluster.predict(datosNormalizados.head(1))
         # print('**************************************************')
         # print(x.info())

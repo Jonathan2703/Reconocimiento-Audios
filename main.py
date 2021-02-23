@@ -1,4 +1,4 @@
-import keras
+
 from Spotify import SpotifyPro
 from kmeans import Kmeans
 
@@ -9,8 +9,12 @@ def main():
     df=spotify.iniciar(idPlaylist='1QP6tyANnZZ9bRTfQG4X7a')
 
     k = Kmeans(df)
+    cluster=None
     if(len(df)):
         k.importarDatos()
+        if (k.red!=None):
+            cluster=k.red
+
     new_model = keras.models.load_model('model.h5')
     
 
