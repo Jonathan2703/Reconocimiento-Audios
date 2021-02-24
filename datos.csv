@@ -1,6 +1,5 @@
 ,cod,artista,nombre,tempo,energy,loudness,danceability,valence,Clasificacion
 49,3GtnId3Cm1Xa6joCj08nzW,Justin Quiles,Jeans,83.943,0.656,-4.395,0.807,0.89,0
-27,3K9r48oXEPcnozxhoLmBdp,Alzate,Devuélveme la Vida,127.233,0.527,-5.317,0.682,0.668,0
 79,1KQMzEI7jSUnorFHNKFAEh,Trio Los Garles,Bandas,152.052,0.898,-4.058,0.696,0.962,0
 78,37jCyQSarX1KQ00HvCtKm5,Trio Los Garles,Andina,116.758,0.916,-2.302,0.805,0.701,0
 77,26sY1gS62pBMmxIJlLrB8s,Trio Los Garles,Los Comuneros,118.725,0.865,-3.03,0.864,0.826,0
@@ -28,10 +27,6 @@
 23,4TaK2Wb4vlSwuA4UGi919s,Maximo Escaleras,La Cumbiambera,144.843,0.918,0.087,0.826,0.975,0
 95,7IemlGq4itPt0RKlUcQV3A,La Máquina Camaleón,Shiva,120.019,0.431,-7.498,0.736,0.798,0
 94,0AbdQ824hl6AEUpQPyJEbP,La Máquina Camaleón,Motora,142.994,0.815,-4.579,0.579,0.974,0
-90,0Ih5szSRPrH6wJXkzLwivY,Juan Fernando Velasco,Dicen,145.092,0.68,-8.09,0.733,0.818,0
-86,1lQ82y5K95hQOfTxnEFTBe,Julio Jaramillo,Niégalo Todo,124.349,0.409,-10.365,0.7,0.743,0
-83,2dOF2NUuOkuxskCqYfKbUt,Julio Jaramillo,Nuestro Juramento,125.172,0.309,-16.254,0.835,0.813,0
-81,3530wKCxbNTxhStxiRiqvW,Widinson,Dos Morenas,116.019,0.763,-2.699,0.895,0.9,0
 24,2AR6gN4QVBdJ8iw2KSG7fQ,Olga Tañón,Es Mentiroso,144.28,0.814,-4.431,0.847,0.895,0
 13,0PniWiJeVL4tyF4BVItzHW,Don Medardo y sus Players Mauricio Luzuriaga,Cumbia Chonera,107.475,0.737,-6.685,0.762,0.721,0
 80,73uXfG7ynTm58JjHkp9dO1,Trio Los Garles,San Juanito,117.932,0.863,-2.775,0.86,0.894,0
@@ -90,8 +85,6 @@
 64,0HIoLXQTYfRvsDGifz8cWY,Ricardo Arjona,Minutos,99.973,0.842,-3.546,0.634,0.358,2
 37,2jWV0ux1lnk31ya4T4Sriu,"Dimitri Vegas, Moguai & Like Mike",Mammoth - Original,128.008,0.848,-5.982,0.631,0.393,2
 67,5vnAu12wplLvx1XH01PwRH,Bunbury,La chispa adecuada (feat. León Larregui) - MTV Unplugged,115.997,0.482,-9.083,0.521,0.307,2
-68,1nULBrlzWatdcjA2ZctIMv,Zoé,Labios Rotos - Live,109.054,0.758,-7.08,0.579,0.288,2
-69,5tyznRXlcIx0XlQ7S8iCMW,Zoé,Love,79.003,0.512,-8.596,0.692,0.739,2
 36,54fgYLd9UtdPZVjx548Ver,Martin Garrix,Proxy,128.052,0.695,-5.722,0.667,0.292,2
 71,2XU0oxnq2qxCpomAAuJY8K,Tones And I,Dance Monkey,98.027,0.588,-6.4,0.824,0.513,2
 35,4hfYGVqQ0ElgeibMocRUvi,Martin Garrix,Wizard,127.964,0.907,-4.991,0.593,0.244,2

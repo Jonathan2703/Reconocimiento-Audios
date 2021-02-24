@@ -9,6 +9,7 @@ class Kmeans:
     def __init__(self,datos):
         self.datos=datos
         self.red=None
+        self.normalizados=None
         
     def importarDatos(self):
         # direccion='C:/Users/chris/Desktop/Universidad de Cuenca/IA/DATASETS/caracteristicas de vinos.csv'
@@ -25,7 +26,7 @@ class Kmeans:
         variables=pd.DataFrame(aux,dtype='float64')
         variables.insert(0,'tempo',tempoAux['tempo'])
         variables.insert(0, 'Loudness', tempoAux['loudness'])
-
+        self.normalizados=variables
         print(self.datos.drop(labels=['cod', 'artista','nombre'],axis=1).head())
         print()
         print(variables.describe())
@@ -72,6 +73,7 @@ class Kmeans:
         #una vez listo el cluster, agrego la clasificacion al archivo original
         datosOriginal['Clasificacion']=cluster.labels_
         datosNormalizados['Clasificacion'] = cluster.labels_
+
         return cluster
 
     def prepararParaGraficaren2D(self,datosNormalizados,datosOriginales):
