@@ -36,7 +36,7 @@ def main():
 
 
 
-    # new_model = keras.models.load_model('model.h5')
+
     
 
 
