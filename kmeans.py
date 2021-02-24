@@ -1,3 +1,5 @@
+import pickle
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,6 +17,10 @@ class Kmeans:
         # datos.info()#muestro el nombre de las columnas del dataset
         tempoOriginal=pd.DataFrame(self.datos.drop(labels=['cod', 'artista', 'nombre', 'energy',  'danceability', 'valence'],axis=1),dtype='float64')#normalizo el tempo
         aux=self.datos.drop(labels=['cod', 'artista', 'nombre','tempo','loudness'],axis=1) #elimino las columnas que no se usan, las de texto
+        descricion=pd.DataFrame(aux,dtype='float64')
+        descricion.insert(0,'tempo',tempoOriginal['tempo'])
+        descricion.insert(0, 'Loudness', tempoOriginal['loudness'])
+        print(descricion.describe())
         tempoAux=(tempoOriginal-tempoOriginal.min())/(tempoOriginal.max()-tempoOriginal.min())
         variables=pd.DataFrame(aux,dtype='float64')
         variables.insert(0,'tempo',tempoAux['tempo'])
@@ -28,10 +34,20 @@ class Kmeans:
         #
         cluster=self.kmeansPro(datosNormalizados=variables,datosOriginal=self.datos)#realizao entrenamiento
         # #
+        print('Datos normalizados histograma')
+        self.resultados(variables)
         self.graficarFrecuencias(variables)
         # # self.prepararParaGraficaren2D(datosNormalizados,self.datos)
         self.guardarDatos(self.datos,'datos.csv')
-        self.test(red=cluster,dato=variables.loc[[15], :])
+        # self.test(red=cluster,dato=variables.loc[[15], :])
+    def resultados(self,df):
+        fig, axes = plt.subplots(2, 2, figsize=(50, 8))
+        fig, ax = plt.subplots()
+        ax.set_title('Estado de Ánimo', fontsize=15)
+        ax.hist([float(m) for m in df['Clasificacion']])
+        ax.set_xlabel('Categorias')
+        ax.set_ylabel('Número Canciones')
+        plt.show()
 
     def determinarK(self,datos):
         wcss=[] #lista vacia para almacenar los valoes wcss
@@ -55,6 +71,7 @@ class Kmeans:
         # print(x.info())
         #una vez listo el cluster, agrego la clasificacion al archivo original
         datosOriginal['Clasificacion']=cluster.labels_
+        datosNormalizados['Clasificacion'] = cluster.labels_
         return cluster
 
     def prepararParaGraficaren2D(self,datosNormalizados,datosOriginales):
@@ -92,6 +109,9 @@ class Kmeans:
         # plt.show()
     def graficarFrecuencias(self,df):
         fig, axes = plt.subplots(2, 2, figsize=(15, 8))
+        fig ,ax=plt.subplots()
+        ax.set_title('Loudness', fontsize=15)
+        ax.hist([float(m) for m in df['Loudness']])
 
 
         axes[0, 0].hist([float(m) for m in df['danceability']])
@@ -113,6 +133,8 @@ class Kmeans:
         print(dato)
         x=red.predict(dato)
         print(x)
+
+
 
 
 
